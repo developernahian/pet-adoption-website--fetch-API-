@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peddy</title>
+
+    <!-- todo ========== Favicon ========== -->
+    <link rel="shortcut icon" href="./assets/logo.webp" />
+
+    <!-- todo ========== Tailwind and DaisyUI Links ========== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- todo ========== Google Font ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- todo ========== Tailwind CSS Configuration ========== -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "rgb(19, 19, 19)",
+              secondary: "rgba(19, 19, 19, 0.7)",
+              aqua_primary: "rgb(14, 122, 129)",
+              aqua_secondary: "rgba(14, 122, 129, 0.1)",
+              bg_error: "rgba(19, 19, 19, 0.03)",
+              ftext: "rgba(255, 255, 255, 0.6)",
+            },
+            fontFamily: {
+              Lato: "Lato",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- todo ======== Custom Css Link ======= -->
+    <style>
+
+        html{
+          scroll-behavior: smooth;
+        }
+
+    </style>
+
+
+  </head>
+
+  <body class="font-Lato">
+    <header class="">
+      <nav class="navbar md:w-11/12 mx-auto pt-4">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a class="text-lg font-medium text-secondary">Home</a></li>
+              <li><a class="text-lg font-medium text-secondary">Contact</a></li>
+              <li><a class="text-lg font-medium text-secondary">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <img class="w-7 h-7" src="./assets/logo.webp" alt="logo" />
+            <span class="text-3xl font-extrabold">Peddy</span>
+          </div>
+        </div>
+
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 gap-5">
+            <li>
+              <a
+                class="text-lg font-medium text-secondary hover:bg-aqua_primary hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-lg font-medium text-secondary hover:bg-aqua_primary hover:text-white"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-lg font-medium text-secondary hover:bg-aqua_primary hover:text-white"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar-end">
+          <div class="rounded-full border border-gray-400 hover:cursor-pointer">
+            <img class="p-1" src="./assets/profile.png" alt="profile" />
+          </div>
+        </div>
+      </nav>
+
+      <section
+        class="w-11/12 md:w-3/4 lg:w-6/12 mx-auto mt-8 md:mt-16 flex flex-col justify-center items-center text-center"
+      >
+        <h3 class="text-2xl font-bold text-secondary">
+          Bringing Families Together ❤️‍🔥
+        </h3>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-primary pt-6">
+          Your Path to Adoption Starts Here
+        </h1>
+        <p class="pt-8">
+          Pet adoption saves lives, reduces shelter overcrowding, and provides
+          animals with loving homes. It promotes responsible ownership while
+          offering companionship and supporting animal welfare efforts.
+        </p>
+
+        <a
+          href="#friend-section"
+          class="btn bg-aqua_primary hover:bg-sky-500 text-white mt-8"
+        >
+          View More
+        </a>
+
+        <img class="pt-8" src="./assets/pet.webp" alt="img" />
+      </section>
+    </header>
+
+    <!-- todo ========== Main Section ========== -->
+    <main class="w-11/12 md:w-6/12 mx-auto mt-8 md:mt-16">
+      <!-- Adopt your Best Friend Section -->
+      <section
+        class="w-11/12 md:w-9/12 mx-auto mt-8 md:mt-16 flex flex-col text-center mb-12"
+        id="friend-section"
+      >
+        <h4 class="text-3xl md:text-4xl font-extrabold text-primary">
+          Adopt Your Best Friend
+        </h4>
+        <p class="text-secondary pt-5">
+          In addition to supporting animal welfare, pet adoption provides loving
+          homes, saves lives, promotes responsible ownership, and builds
+          companionship.
+        </p>
+      </section>
+    </main>
+
+    <!-- todo ======== Dynamic Button Section ======== -->
+
+    <!-- TODO  Modal -->
+
+    <div id="spinner-btn" class="flex justify-center items-center hidden">
+      <span class="loading loading-bars loading-lg"></span>
+    </div>
+
+    <section
+      id="categories"
+      class="w-11/12 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-20 lg:gap-24 xl:gap-36"
+    ></section>
+
+    <!-- todo ======== Sort by Price section ========= -->
+    <section class="w-11/12 mx-auto flex justify-between items-center my-9">
+      <p class="text-xl md:text-2xl font-extrabold text-primary">
+        Best Deal For You
+      </p>
+      <button
+        id="sotringBtn"
+        class="btn bg-aqua_primary hover:bg-sky-500 text-white"
+      >
+        Sort by Price
+      </button>
+    </section>
+
+    <!-- TODO  Spinner -->
+    <div id="spinner-card" class="flex justify-center items-center hidden">
+      <span class="loading loading-bars loading-lg"></span>
+    </div>
+
+    <!-- todo ======== Dynamic Pet Section ======== -->
+    <section
+      id="pets-container"
+      class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-4"
+    >
+      <!--todo left -->
+      <div id="pet-left-container" class="md:col-span-3">
+        <div
+          id="pet-left"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4"
+        ></div>
+      </div>
+
+      <!--todo right -->
+      <div
+        id="pet-right-container"
+        class="col-span-1 border rounded-2xl border-gray-300"
+      >
+        <div
+          id="pet-right"
+          class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 p-4"
+        ></div>
+      </div>
+    </section>
+
+    <!-- TODO:  Modal  Trust-->
+    <dialog id="adopt_modal" class="modal">
+      <div
+        class="modal-box flex justify-center items-center flex-col space-y-3 pt-8"
+      >
+        <img src="./assets/icon/trust.gif" alt="Trust Icon" />
+        <span class="text-lg font-bold"
+          >Adoption Process is Start For your Pet</span
+        >
+        <span id="count_number" class="font-bold text-7xl">3</span>
+        <div class="modal-action"></div>
+      </div>
+    </dialog>
+
+    <!-- TODO:  Modal Details -->
+
+    <dialog id="details_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal_content"></div>
+        <div class="modal-action">
+          <form method="dialog" class="w-full">
+            <!-- cancel button -->
+            <button
+              class="btn w-full text-lg text-aqua_primary bg-aqua_secondary border-2 border-aqua_primary"
+            >
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="bg-black text-white p-6 mt-8 md:mt-16 lg:mt-24">
+      <div
+        class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-20 lg:gap-64 text-center md:text-left pt-6"
+      >
+        <!-- Left section -->
+        <div>
+          <div class="flex items-center gap-3 justify-center md:justify-start">
+            <img class="w-7 h-7" src="./assets/logo.webp" alt="logo" />
+            <span class="text-3xl font-extrabold">Peddy</span>
+          </div>
+
+          <ul class="text-ftext space-y-1 pt-6">
+            <li>Location: Mirpur, Dhaka 1216</li>
+            <li>Phone: +880 123 456 789</li>
+            <li>Email: peddy.pet.adoption@gmail.com</li>
+            <li>Openings hours: 9.00 AM - 5.00 PM</li>
+          </ul>
+
+          <div class="flex justify-center md:justify-start">
+            <div class="flex gap-4 pt-6">
+              <a href="https://www.facebook.com/"
+                ><img class="h-7" src="./assets/facebook.png" alt="icon"
+              /></a>
+              <a href="https://www.youtube.com/"
+                ><img class="h-7" src="./assets/youtube.png" alt="icon"
+              /></a>
+              <a href="https://x.com/"
+                ><img class="h-7" src="./assets/twitter.png" alt="icon"
+              /></a>
+              <a href="https://instagram.com/"
+                ><img class="h-7" src="./assets/instagram.png" alt="icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle section -->
+        <div class="flex flex-col items-center pt-14 md:pt-0">
+          <h3 class="font-bold text-lg mb-2">Useful Links</h3>
+
+          <ul class="pt-4 text-ftext">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li><a href="#" class="hover:underline">Animals</a></li>
+            <li><a href="#" class="hover:underline">Foundation</a></li>
+            <li><a href="#" class="hover:underline">Contacty</a></li>
+          </ul>
+        </div>
+
+        <!-- Right section -->
+        <div class="pt-14 md:pt-0">
+          <h3 class="font-bold text-lg mb-2">Drop a Message</h3>
+          <div class="flex flex-col gap-4 pt-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="input input-bordered rounded-xl bg-[#1F1F1F]"
+            />
+            <button
+              class="btn border-0 hover:bg-sky-500 bg-aqua_primary text-white"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-center text-center pt-5 pb-3">
+        <p>&copy; 2024 Peddy. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
